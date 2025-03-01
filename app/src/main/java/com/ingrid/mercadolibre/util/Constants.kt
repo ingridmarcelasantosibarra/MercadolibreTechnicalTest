@@ -6,4 +6,9 @@ object Constants {
     const val DESCRIPTION_END_POINT = "items/{id}/description"
     const val CATEGORIES_END_POINT = "sites/MCO"
     const val KEY_ID = "id"
+    const val PRODUCT = "q"
+    const val LIMIT = "limit"
+    const val OFFSET = "offset"
+    const val SEARCH_END_POINT = "sites/MCO/search"
+
 }

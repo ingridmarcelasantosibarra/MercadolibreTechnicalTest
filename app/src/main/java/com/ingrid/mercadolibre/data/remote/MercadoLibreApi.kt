@@ -3,12 +3,18 @@ package com.ingrid.mercadolibre.data.remote
 import com.ingrid.mercadolibre.data.model.description.DescriptionResponse
 import com.ingrid.mercadolibre.data.model.detail.DetailResponse
 import com.ingrid.mercadolibre.data.model.categories.CategoriesResponse
+import com.ingrid.mercadolibre.data.model.search.SearchResponse
 import com.ingrid.mercadolibre.util.Constants.CATEGORIES_END_POINT
 import com.ingrid.mercadolibre.util.Constants.DESCRIPTION_END_POINT
 import com.ingrid.mercadolibre.util.Constants.DETAILS_END_POINT
 import com.ingrid.mercadolibre.util.Constants.KEY_ID
+import com.ingrid.mercadolibre.util.Constants.LIMIT
+import com.ingrid.mercadolibre.util.Constants.OFFSET
+import com.ingrid.mercadolibre.util.Constants.PRODUCT
+import com.ingrid.mercadolibre.util.Constants.SEARCH_END_POINT
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface MercadoLibreApi {
 
@@ -24,4 +30,12 @@ interface MercadoLibreApi {
 
     @GET(CATEGORIES_END_POINT)
     suspend fun getCategories(): CategoriesResponse
+
+
+    @GET(SEARCH_END_POINT)
+    suspend fun getBySearch(
+        @Query(PRODUCT) product: String,
+        @Query(LIMIT) limit: Int,
+        @Query(OFFSET) offset: Int,
+    ): SearchResponse
 }
