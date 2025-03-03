@@ -8,16 +8,23 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.ingrid.mercadolibre.data.model.categories.Category
+import com.ingrid.mercadolibre.data.model.search.Result
 import com.ingrid.mercadolibre.data.pagingSource.SearchPagingSource
+import com.ingrid.mercadolibre.domain.repository.MercadoLibreRepository
 import com.ingrid.mercadolibre.domain.useCases.MercadoLibreUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val mercadoLibreUseCases: MercadoLibreUseCases
+    private val mercadoLibreUseCases: MercadoLibreUseCases,
+    private val mercadoLibreRepository: MercadoLibreRepository
 ) : ViewModel() {
     var productBySearch by mutableStateOf("")
         private set
@@ -25,20 +32,8 @@ class MainViewModel @Inject constructor(
         private set
     var isLoading by mutableStateOf(false)
         private set
-    var searchFlow by mutableStateOf(
-        Pager(
-            config = PagingConfig(
-                pageSize = 0,
-                initialLoadSize = 0,
-            ),
-            pagingSourceFactory = {
-                SearchPagingSource(
-                    useCase = mercadoLibreUseCases.getSearchUseCase,
-                    product = productBySearch,
-                )
-            }
-        ).flow
-    )
+    var searchFlow: Flow<PagingData<Result>> = emptyFlow()
+        private set
 
     init {
         getCategories()
@@ -46,23 +41,24 @@ class MainViewModel @Inject constructor(
 
 
     fun searchProducts(product: String) {
-        productBySearch = product
         isLoading = true
         searchFlow = Pager(
             config = PagingConfig(
                 pageSize = 50,
                 initialLoadSize = 50,
+                enablePlaceholders = false
             ),
             pagingSourceFactory = {
                 SearchPagingSource(
-                    useCase = mercadoLibreUseCases.getSearchUseCase,
-                    product = productBySearch,
+                    mercadoLibreRepository = mercadoLibreRepository,
+                    product = product,
                 )
             }
-        ).flow.also {
+        ).flow.cachedIn(viewModelScope).also {
             isLoading = false
         }
     }
+
 
     private fun getCategories() {
         viewModelScope.launch {

@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ingrid.mercadolibre.ui.theme.yellow
 
 @Composable
 fun LoaderComponent(
@@ -50,34 +51,13 @@ fun LoaderComponent(
                 .clickable(false) {},
             contentAlignment = Alignment.Center,
         ) {
-            Column(
-                modifier = modifier
-                    .fillMaxSize()
-                    .background(color = Color.White),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-
-                Text(
-                    text = "Espere un momento",
-                    textAlign = TextAlign.Center,
-                    style = MaterialTheme.typography.displayLarge.copy(
-                        color = MaterialTheme.colorScheme.primary,
-                        fontSize = 18.sp,
-                        lineHeight = 22.sp,
-                    ),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = vertical)
-                )
-            }
 
 
             CircularProgressIndicator(
                 modifier = modifier.size(80.dp),
                 strokeWidth = 6.dp,
-                color = MaterialTheme.colorScheme.primary,
-                trackColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.4f),
+                color = yellow,
+                trackColor = yellow.copy(alpha = 0.4f),
             )
 
 

@@ -4,29 +4,29 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.ingrid.mercadolibre.data.model.search.Result
 import com.ingrid.mercadolibre.data.model.search.SearchResponse
+import com.ingrid.mercadolibre.domain.repository.MercadoLibreRepository
 import com.ingrid.mercadolibre.domain.useCases.GetSearchUseCase
 
 class SearchPagingSource(
-    private val useCase: GetSearchUseCase,
+    private val mercadoLibreRepository: MercadoLibreRepository,
     private val product: String
 ) : PagingSource<Int, Result>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Result> {
         return try {
-            val page = params.key ?: 1
-            var response = SearchResponse()
+            val page = params.key ?: 0
+            val offset = page * params.loadSize
 
-            useCase(product = product, offset = page, limit = params.loadSize)
-                .onSuccess { searchResponse ->
+            val response = mercadoLibreRepository.getBySearch(
+                product = product,
+                limit = params.loadSize,
+                offset = offset
+            ).getOrThrow()
 
-                    response = searchResponse
-                }.onFailure {
-                    return@onFailure
-                }
             LoadResult.Page(
                 data = response.results,
-                prevKey = if (page == 1) null else page - 50,
-                nextKey = if (response.results.isNotEmpty()) page + 50 else null
+                prevKey = if (page == 0) null else page - 1,
+                nextKey = if (response.results.isEmpty()) null else page + 1
             )
 
         } catch (e: Exception) {
