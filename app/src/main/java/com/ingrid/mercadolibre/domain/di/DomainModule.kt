@@ -4,6 +4,7 @@ import com.ingrid.mercadolibre.domain.repository.MercadoLibreRepository
 import com.ingrid.mercadolibre.domain.useCases.GetCategoriesUseCase
 import com.ingrid.mercadolibre.domain.useCases.GetDescriptionUseCase
 import com.ingrid.mercadolibre.domain.useCases.GetDetailUseCase
+import com.ingrid.mercadolibre.domain.useCases.GetSearchUseCase
 import com.ingrid.mercadolibre.domain.useCases.MercadoLibreUseCases
 import dagger.Module
 import dagger.Provides
@@ -23,7 +24,8 @@ object DomainModule {
         return MercadoLibreUseCases(
             getDescriptionUseCase = GetDescriptionUseCase(mercadoLibreRepository),
             getDetailUseCase = GetDetailUseCase(mercadoLibreRepository),
-            getCategoriesUseCase = GetCategoriesUseCase(mercadoLibreRepository)
+            getCategoriesUseCase = GetCategoriesUseCase(mercadoLibreRepository),
+            getSearchUseCase = GetSearchUseCase(mercadoLibreRepository)
         )
     }
 }

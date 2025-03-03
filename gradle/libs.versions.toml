@@ -83,6 +83,9 @@ converter-gson = { group = "com.google.code.gson", name = "gson", version.ref = 
 jacoco-org = { group = "org.jacoco", name = "org.jacoco.core", version.ref = "core" }
 #Permission
 com-google-accompanist-accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "appcompanist-permissions" }
+#Paging
+androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version = "3.3.6" }
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version = "3.3.6" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

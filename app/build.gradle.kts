@@ -60,7 +60,8 @@ dependencies {
     implementation(libs.com.google.dagger.hilt.android)
     ksp(libs.com.google.dagger.hilt.android.compiler)
     ksp(libs.androidx.room.compiler)
-
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.paging.runtime)
     implementation(libs.converter.gson)
     implementation(libs.com.google.accompanist.accompanist.permissions)
     implementation(libs.com.squareup.retrofit2.retrofit)
