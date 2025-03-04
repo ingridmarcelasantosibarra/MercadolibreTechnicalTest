@@ -9,6 +9,8 @@ object Constants {
     const val PRODUCT = "q"
     const val LIMIT = "limit"
     const val OFFSET = "offset"
+    const val ITEM_CONDITION = "ITEM_CONDITION"
     const val SEARCH_END_POINT = "sites/MCO/search"
+    const val LOGISTIC_TYPE = "cross_docking"
 
 }

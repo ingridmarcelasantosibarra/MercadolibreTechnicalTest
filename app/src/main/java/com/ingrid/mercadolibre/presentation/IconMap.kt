@@ -32,6 +32,7 @@ import androidx.compose.material.icons.filled.SportsSoccer
 import androidx.compose.material.icons.filled.TwoWheeler
 import androidx.compose.material.icons.filled.VideogameAsset
 import androidx.compose.material.icons.filled.Watch
+import androidx.compose.ui.graphics.Color
 
 object IconMap {
     val iconMap = mapOf(
@@ -68,5 +69,11 @@ object IconMap {
         "MCO1540" to Icons.Default.DesignServices,
         "MCO1953" to Icons.AutoMirrored.Filled.AltRoute
     )
-
+    val listColorMap = listOf(
+        Color(0xFFFAD7D7),
+        Color(0xFFFAC2AC),
+        Color(0xFFEFDE9C),
+        Color(0xFFE3EF9C),
+        Color(0xFF4F904C),
+    )
 }
