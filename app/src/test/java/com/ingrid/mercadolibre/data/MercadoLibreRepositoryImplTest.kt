@@ -1,7 +1,6 @@
 package com.ingrid.mercadolibre.data
 
 import com.google.common.truth.Truth.assertThat
-import com.ingrid.mercadolibre.data.model.search.SearchResponse
 import com.ingrid.mercadolibre.data.remote.MercadoLibreApi
 import com.ingrid.mercadolibre.data.repositoryImpl.MercadoLibreRepositoryImpl
 import com.ingrid.mercadolibre.json.malformedGeDescription
@@ -9,16 +8,13 @@ import com.ingrid.mercadolibre.json.malformedGetBySearch
 import com.ingrid.mercadolibre.json.malformedGetCategories
 import com.ingrid.mercadolibre.json.malformedGetDetails
 import com.ingrid.mercadolibre.util.Util.readJsonFile
-import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockResponse
+import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import okhttp3.mockwebserver.MockWebServer
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit

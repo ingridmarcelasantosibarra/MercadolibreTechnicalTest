@@ -57,6 +57,8 @@ fun MainScreen(
                 },
                 onClearClick = {
                     searchQuery = ""
+                    showText = false
+                    mainViewModel.clearSearch()
                 }
             )
         }
@@ -71,7 +73,9 @@ fun MainScreen(
         ) {
             if (!showText) {
                 SectionCategories(itemsList = categories, onClickItem = {
-
+                    showText = true
+                    searchQuery = it.name
+                    mainViewModel.searchProducts(it.name)
                 })
             }
             AnimatedVisibility(visible = showText) {

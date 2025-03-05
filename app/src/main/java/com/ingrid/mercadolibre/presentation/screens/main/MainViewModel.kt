@@ -59,6 +59,10 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    fun clearSearch() {
+        searchFlow = emptyFlow()
+    }
+
 
      fun getCategories() {
         viewModelScope.launch {
