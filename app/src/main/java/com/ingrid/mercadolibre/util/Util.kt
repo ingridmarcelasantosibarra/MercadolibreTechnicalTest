@@ -1,6 +1,9 @@
 package com.ingrid.mercadolibre.util
 
 import com.ingrid.mercadolibre.data.model.detail.DetailResponse
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -18,6 +21,22 @@ object Util {
             in 41..60 -> 2
             in 61..80 -> 3
             else -> 4
+        }
+    }
+    fun readJsonFile(fileName: String): String {
+        var inputStream: InputStream? = null
+        try {
+            inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
+            val builder = StringBuilder()
+            val reader = BufferedReader(InputStreamReader(inputStream))
+            var str: String? = reader.readLine()
+            while (str != null) {
+                builder.append(str)
+                str = reader.readLine()
+            }
+            return builder.toString()
+        } finally {
+            inputStream?.close()
         }
     }
 }

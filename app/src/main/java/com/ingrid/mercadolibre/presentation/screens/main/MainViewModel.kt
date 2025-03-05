@@ -60,7 +60,7 @@ class MainViewModel @Inject constructor(
     }
 
 
-    private fun getCategories() {
+     fun getCategories() {
         viewModelScope.launch {
             isLoading = true
             mercadoLibreUseCases.getCategoriesUseCase()
@@ -69,7 +69,6 @@ class MainViewModel @Inject constructor(
                     categoriesResponse.categories.forEach {
                         listCategories.add(it)
                     }
-                    println("OOJOOO $listCategories")
                 }.onFailure {
                     isLoading = false
 

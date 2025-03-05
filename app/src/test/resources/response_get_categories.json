@@ -1,0 +1,180 @@
+{
+  "id": "MCO",
+  "name": "Colombia",
+  "country_id": "CO",
+  "sale_fees_mode": "not_free",
+  "mercadopago_version": 3,
+  "default_currency_id": "COP",
+  "immediate_payment": "optional",
+  "payment_method_ids": [
+    "MCOMP",
+    "MCOWC",
+    "MCOVS",
+    "MCOMC",
+    "MCOAM",
+    "MCOWT",
+    "MCOCO",
+    "MCOMO",
+    "MCOCH",
+    "MCOBC",
+    "MCOOT",
+    "MCOPO",
+    "MCOON"
+  ],
+  "settings": {
+    "identification_types": [
+      "C.C.",
+      "C.E.",
+      "RUT",
+      "NIT"
+    ],
+    "taxpayer_types": [],
+    "identification_types_rules": null
+  },
+  "currencies": [
+    {
+      "id": "COP",
+      "symbol": "$"
+    },
+    {
+      "id": "USD",
+      "symbol": "U$S"
+    }
+  ],
+  "categories": [
+    {
+      "id": "MCO1747",
+      "name": "Accesorios para VehÃ­culos"
+    },
+    {
+      "id": "MCO441917",
+      "name": "Agro"
+    },
+    {
+      "id": "MCO1403",
+      "name": "Alimentos y Bebidas"
+    },
+    {
+      "id": "MCO1071",
+      "name": "Animales y Mascotas"
+    },
+    {
+      "id": "MCO1367",
+      "name": "AntigÃ¼edades y Colecciones"
+    },
+    {
+      "id": "MCO1368",
+      "name": "Arte, PapelerÃ­a y MercerÃ­a"
+    },
+    {
+      "id": "MCO1384",
+      "name": "BebÃ©s"
+    },
+    {
+      "id": "MCO1246",
+      "name": "Belleza y Cuidado Personal"
+    },
+    {
+      "id": "MCO40433",
+      "name": "Boletas para EspectÃ¡culos"
+    },
+    {
+      "id": "MCO1039",
+      "name": "CÃ¡maras y Accesorios"
+    },
+    {
+      "id": "MCO1743",
+      "name": "Carros, Motos y Otros"
+    },
+    {
+      "id": "MCO1051",
+      "name": "Celulares y TelÃ©fonos"
+    },
+    {
+      "id": "MCO1648",
+      "name": "ComputaciÃ³n"
+    },
+    {
+      "id": "MCO1144",
+      "name": "Consolas y Videojuegos"
+    },
+    {
+      "id": "MCO172890",
+      "name": "ConstrucciÃ³n"
+    },
+    {
+      "id": "MCO1276",
+      "name": "Deportes y Fitness"
+    },
+    {
+      "id": "MCO5726",
+      "name": "ElectrodomÃ©sticos"
+    },
+    {
+      "id": "MCO1000",
+      "name": "ElectrÃ³nica, Audio y Video"
+    },
+    {
+      "id": "MCO175794",
+      "name": "Herramientas"
+    },
+    {
+      "id": "MCO1574",
+      "name": "Hogar y Muebles"
+    },
+    {
+      "id": "MCO1499",
+      "name": "Industrias y Oficinas"
+    },
+    {
+      "id": "MCO1459",
+      "name": "Inmuebles"
+    },
+    {
+      "id": "MCO1182",
+      "name": "Instrumentos Musicales"
+    },
+    {
+      "id": "MCO1132",
+      "name": "Juegos y Juguetes"
+    },
+    {
+      "id": "MCO3025",
+      "name": "Libros, Revistas y Comics"
+    },
+    {
+      "id": "MCO1168",
+      "name": "MÃºsica, PelÃ­culas y Series"
+    },
+    {
+      "id": "MCO118204",
+      "name": "Recuerdos, PiÃ±aterÃ­a y Fiestas"
+    },
+    {
+      "id": "MCO3937",
+      "name": "Relojes y Joyas"
+    },
+    {
+      "id": "MCO1430",
+      "name": "Ropa y Accesorios"
+    },
+    {
+      "id": "MCO180800",
+      "name": "Salud y Equipamiento MÃ©dico"
+    },
+    {
+      "id": "MCO1540",
+      "name": "Servicios"
+    },
+    {
+      "id": "MCO1953",
+      "name": "Otras categorÃ­as"
+    }
+  ],
+  "channels": [
+    "marketplace",
+    "mshops",
+    "private",
+    "mp-merchants"
+  ]
+}

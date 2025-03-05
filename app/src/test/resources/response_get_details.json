@@ -1,0 +1,177 @@
+{
+  "id": "MCO608207485",
+  "site_id": "MCO",
+  "title": "Ponque Casero Biombo Vainilla X 220g",
+  "subtitle": null,
+  "seller_id": 280824856,
+  "category_id": "MCO177945",
+  "official_store_id": 1287,
+  "price": 3550,
+  "base_price": 3550,
+  "original_price": null,
+  "currency_id": "COP",
+  "initial_quantity": 34,
+  "available_quantity": 1,
+  "sold_quantity": 5,
+  "sale_terms": [],
+  "buying_mode": "buy_it_now",
+  "listing_type_id": "gold_special",
+  "start_time": "2021-02-19T03:56:36.000Z",
+  "stop_time": "2041-02-13T04:00:00.000Z",
+  "condition": "new",
+  "permalink": "https://articulo.mercadolibre.com.co/MCO-608207485-ponque-casero-biombo-vainilla-x-220g-_JM",
+  "thumbnail_id": "794868-MCO44931443397_022021",
+  "thumbnail": "http://http2.mlstatic.com/D_794868-MCO44931443397_022021-I.jpg",
+  "secure_thumbnail": "https://http2.mlstatic.com/D_794868-MCO44931443397_022021-I.jpg",
+  "pictures": [
+    {
+      "id": "794868-MCO44931443397_022021",
+      "url": "http://http2.mlstatic.com/D_794868-MCO44931443397_022021-O.jpg",
+      "secure_url": "https://http2.mlstatic.com/D_794868-MCO44931443397_022021-O.jpg",
+      "size": "453x500",
+      "max_size": "880x970",
+      "quality": ""
+    }
+  ],
+  "video_id": null,
+  "descriptions": [],
+  "accepts_mercadopago": true,
+  "non_mercado_pago_payment_methods": [],
+  "shipping": {
+    "mode": "me2",
+    "methods": [],
+    "tags": [
+      "self_service_in"
+    ],
+    "dimensions": null,
+    "local_pick_up": false,
+    "free_shipping": false,
+    "logistic_type": "cross_docking",
+    "store_pick_up": false
+  },
+  "international_delivery_mode": "none",
+  "seller_address": {
+    "city": {
+      "id": "TUNPQ0FOVDMyNjIx",
+      "name": "Antonio NariÃ±o"
+    },
+    "state": {
+      "id": "CO-DC",
+      "name": "BogotÃ¡ D.C."
+    },
+    "country": {
+      "id": "CO",
+      "name": "Colombia"
+    },
+    "search_location": {
+      "neighborhood": {
+        "id": "TUNPQlJFUzEzNjE1",
+        "name": "Restrepo"
+      },
+      "city": {
+        "id": "TUNPQ0FOVDMyNjIx",
+        "name": "Antonio NariÃ±o"
+      },
+      "state": {
+        "id": "TUNPUEJPR1gxMDljZA",
+        "name": "BogotÃ¡ D.C."
+      }
+    },
+    "id": 1127547780
+  },
+  "seller_contact": null,
+  "location": {},
+  "coverage_areas": [],
+  "attributes": [
+    {
+      "id": "BRAND",
+      "name": "Marca",
+      "value_id": "11750302",
+      "value_name": "Locatel",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "11750302",
+          "name": "Locatel",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros"
+    },
+    {
+      "id": "GTIN",
+      "name": "CÃ³digo universal de producto",
+      "value_id": null,
+      "value_name": "7705326079152",
+      "value_struct": null,
+      "values": [
+        {
+          "id": null,
+          "name": "7705326079152",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros"
+    },
+    {
+      "id": "ITEM_CONDITION",
+      "name": "CondiciÃ³n del Ã­tem",
+      "value_id": "2230284",
+      "value_name": "Nuevo",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "2230284",
+          "name": "Nuevo",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros"
+    },
+    {
+      "id": "SELLER_SKU",
+      "name": "SKU",
+      "value_id": null,
+      "value_name": "26715",
+      "value_struct": null,
+      "values": [
+        {
+          "id": null,
+          "name": "26715",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros"
+    }
+  ],
+  "warnings": [],
+  "listing_source": "",
+  "variations": [],
+  "status": "active",
+  "sub_status": [],
+  "tags": [
+    "good_quality_picture",
+    "good_quality_thumbnail",
+    "loyalty_discount_eligible",
+    "immediate_payment",
+    "cart_eligible"
+  ],
+  "warranty": null,
+  "catalog_product_id": null,
+  "domain_id": "MCO-CANDIES",
+  "parent_item_id": null,
+  "differential_pricing": null,
+  "deal_ids": [],
+  "automatic_relist": false,
+  "date_created": "2021-02-19T03:56:36.000Z",
+  "last_updated": "2022-11-18T11:15:52.915Z",
+  "health": 0.75,
+  "catalog_listing": false,
+  "channels": [
+    "marketplace"
+  ]
+}
