@@ -33,7 +33,7 @@ fun SectionCategories(
         ) {
             items(itemsList) { item ->
                 ItemCategory(item = item, modifier = modifier, onClickItem = {
-
+                    onClickItem(item)
                 })
             }
         }

@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ingrid.mercadolibre.data.model.categories.Category
 import com.ingrid.mercadolibre.presentation.IconMap.iconMap
-import com.ingrid.mercadolibre.ui.theme.yellow
+import com.ingrid.mercadolibre.ui.theme.YellowML
 
 @Composable
 fun ItemCategory(item: Category, modifier: Modifier = Modifier, onClickItem : (Category) -> Unit) {
@@ -70,7 +70,7 @@ fun ItemCategory(item: Category, modifier: Modifier = Modifier, onClickItem : (C
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .background(yellow),
+                    .background(YellowML),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(

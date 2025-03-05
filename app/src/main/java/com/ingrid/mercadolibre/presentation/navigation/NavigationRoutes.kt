@@ -7,3 +7,6 @@ object Splash
 
 @Serializable
 object Main
+
+@Serializable
+data class Detail(val id: String, val price: Int, val title: String)

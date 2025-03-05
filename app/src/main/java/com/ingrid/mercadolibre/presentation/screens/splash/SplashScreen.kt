@@ -21,7 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ingrid.mercadolibre.R
-import com.ingrid.mercadolibre.ui.theme.yellow
+import com.ingrid.mercadolibre.ui.theme.YellowML
 
 @Composable
 fun SplashScreen(
@@ -40,7 +40,7 @@ fun SplashScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(yellow)
+            .background(YellowML)
             .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {

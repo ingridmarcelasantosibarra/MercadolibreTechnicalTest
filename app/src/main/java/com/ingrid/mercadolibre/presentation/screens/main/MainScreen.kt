@@ -26,11 +26,11 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.ingrid.mercadolibre.data.model.search.Result
 import com.ingrid.mercadolibre.presentation.core.LoaderComponent
 import com.ingrid.mercadolibre.presentation.screens.search.SearchBarComponent
-import com.ingrid.mercadolibre.ui.theme.gray10
+import com.ingrid.mercadolibre.ui.theme.GrayML
 
 @Composable
 fun MainScreen(
-    navigateNextScreen: () -> Unit,
+    navigateNextScreen: (String, Int, String) -> Unit,
     mainViewModel: MainViewModel = hiltViewModel()
 ) {
     val isLoading = mainViewModel.isLoading
@@ -44,7 +44,7 @@ fun MainScreen(
         topBar = {
             SearchBarComponent(
                 searchText = searchQuery,
-                tint = gray10,
+                tint = GrayML,
                 placeholder = "Buscar en mercado libre",
                 onSearchTextChanged = {
                     searchQuery = it
@@ -76,7 +76,7 @@ fun MainScreen(
             }
             AnimatedVisibility(visible = showText) {
                 LazyColumn(
-                    contentPadding = PaddingValues(10.dp)
+                    contentPadding = PaddingValues(16.dp)
                 ) {
                     items(resultList.itemCount) { index ->
                         val product = resultList[index]
@@ -84,6 +84,9 @@ fun MainScreen(
                             ListContent(
                                 context = context,
                                 products = it,
+                                onClick = { product ->
+                                    navigateNextScreen(product.id, product.price, product.title)
+                                }
                             )
                         }
                     }
