@@ -16,7 +16,6 @@ hilt-version = "2.52"
 #Retrofit
 retrofit-version = "2.9.0"
 retrofit-okHttpVersion = "4.11.0"
-navigationRuntimeKtxVersion = "2.8.5"
 kotlinxSerialization = "1.7.3"
 #Plugins
 plug-google-devtools-ksp = "2.0.0-1.0.24"
@@ -26,7 +25,6 @@ gson = "2.10.1"
 core = "0.8.8"
 #Build
 build-androidBuildToolsVersion = "8.7.3"
-build-hiltAndroidGradlePluginVersion = "2.50"
 build-gradlePluginVersion = "1.9.0"
 build-googlePlayServicesVersion = "4.4.2"
 #appcompanist-permissions

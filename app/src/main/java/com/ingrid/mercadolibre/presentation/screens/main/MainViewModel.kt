@@ -1,5 +1,6 @@
 package com.ingrid.mercadolibre.presentation.screens.main
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -26,8 +27,7 @@ class MainViewModel @Inject constructor(
     private val mercadoLibreUseCases: MercadoLibreUseCases,
     private val mercadoLibreRepository: MercadoLibreRepository
 ) : ViewModel() {
-    var productBySearch by mutableStateOf("")
-        private set
+
     var listCategories = mutableStateListOf<Category>()
         private set
     var isLoading by mutableStateOf(false)
@@ -75,8 +75,8 @@ class MainViewModel @Inject constructor(
                     }
                 }.onFailure {
                     isLoading = false
-
-
+                    val errorCode = it.message ?: ""
+                    Log.e("error detail", errorCode)
                     return@onFailure
                 }
         }

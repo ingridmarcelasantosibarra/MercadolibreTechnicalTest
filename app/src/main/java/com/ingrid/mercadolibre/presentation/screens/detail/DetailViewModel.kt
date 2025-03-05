@@ -1,6 +1,7 @@
 package com.ingrid.mercadolibre.presentation.screens.detail
 
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -47,12 +48,6 @@ class DetailViewModel @Inject constructor(
                 }.onFailure {
                     isLoading = false
                     val errorCode = it.message ?: ""
-                    /*_eventUi.send(
-                        DetailEventUi.ShowError(
-                            title = "Lo sentimos!",
-                            description = "Estamos trabajando para brindarte un mejor servicio."
-                        )
-                    )*/
                     Log.e("error detail", errorCode)
                     return@onFailure
                 }
